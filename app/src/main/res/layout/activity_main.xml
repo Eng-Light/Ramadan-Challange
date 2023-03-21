@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".MainActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="230dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/data" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/data1" />
+
+    <TextView
+        android:id="@+id/tv_ramadan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/storymakergtdemo"
+        android:text="@string/ramadan"
+        android:textColor="@color/yellow"
+        android:textSize="56sp"
+        app:layout_constraintEnd_toStartOf="@id/tv_kareem"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/animationView" />
+
+    <TextView
+        android:id="@+id/tv_kareem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/storymakergtdemo"
+        android:text="@string/kareem"
+        android:textColor="@color/yellow"
+        android:textSize="56sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_ramadan"
+        app:layout_constraintTop_toBottomOf="@id/tv_ramadan" />
+
+    <LinearLayout
+        android:id="@+id/tv_fajr"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing16"
+        android:layout_marginTop="@dimen/spacing16"
+        android:background="@drawable/rounded"
+        android:gravity="fill_horizontal"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/spacing16"
+        android:paddingVertical="@dimen/spacing8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_kareem">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/fajr"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/textSizeNormal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_04_12_am"
+            android:layout_weight="1"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/textSizeNormal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tv_sunrise"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing16"
+        android:layout_marginTop="@dimen/spacing8"
+        android:background="@drawable/rounded"
+        android:gravity="fill_horizontal"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/spacing16"
+        android:paddingVertical="@dimen/spacing8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_fajr">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/sunrise"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/textSizeNormal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/_05_46_am"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/textSizeNormal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tv_duhr"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing16"
+        android:layout_marginTop="@dimen/spacing8"
+        android:background="@drawable/rounded"
+        android:gravity="fill_horizontal"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/spacing16"
+        android:paddingVertical="@dimen/spacing8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_sunrise">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/duhr"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/textSizeNormal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/_12_43_pm"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/textSizeNormal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tv_asr"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing16"
+        android:layout_marginTop="@dimen/spacing8"
+        android:background="@drawable/rounded"
+        android:gravity="fill_horizontal"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/spacing16"
+        android:paddingVertical="@dimen/spacing8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_duhr">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/asr"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/textSizeNormal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_06_09_pm"
+            android:layout_weight="1"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/textSizeNormal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tv_maghrib"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing16"
+        android:layout_marginTop="@dimen/spacing8"
+        android:background="@drawable/rounded"
+        android:gravity="fill_horizontal"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/spacing16"
+        android:paddingVertical="@dimen/spacing8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_asr">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/magrib"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/textSizeNormal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_06_09_pm"
+            android:layout_weight="1"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/textSizeNormal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tv_isha"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing16"
+        android:layout_marginTop="@dimen/spacing8"
+        android:background="@drawable/rounded"
+        android:gravity="fill_horizontal"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/spacing16"
+        android:paddingVertical="@dimen/spacing8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_maghrib">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/isha"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/textSizeNormal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_07_29_pm"
+            android:layout_weight="1"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/textSizeNormal" />
+    </LinearLayout>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

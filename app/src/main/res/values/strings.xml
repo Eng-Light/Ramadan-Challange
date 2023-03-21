@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">RamadanChallange</string>
+    <string name="ramadan">Ramadan</string>
+    <string name="kareem">Kareem</string>
+    <string name="fajr">Fajr</string>
+    <string name="_04_12_am">04:12 AM</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="duhr">Duhr</string>
+    <string name="asr">Asr</string>
+    <string name="magrib">Magrib</string>
+    <string name="isha">Isha</string>
+    <string name="_05_46_am">05:46 AM</string>
+    <string name="_12_43_pm">12:43 PM</string>
+    <string name="_03_46_pm">03:46 PM</string>
+    <string name="_06_09_pm">06:09 PM</string>
+    <string name="_07_29_pm">07:29 PM</string>
+</resources>
